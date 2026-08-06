@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: 250 250 249;
+    --surface: 255 255 255;
+    --elevated: 245 245 244;
+    --line: 231 229 228;
+    --ink: 24 24 27;
+    --muted: 82 82 91;
+    --faint: 120 118 116;
+    --accent: 13 148 136;
+    --accent-soft: 204 251 241;
+  }
+
+  .dark {
+    --bg: 9 9 11;
+    --surface: 24 24 27;
+    --elevated: 39 39 42;
+    --line: 39 39 42;
+    --ink: 250 250 250;
+    --muted: 161 161 170;
+    --faint: 113 113 122;
+    --accent: 45 212 191;
+    --accent-soft: 19 78 74;
+  }
+
+  * {
+    @apply border-line;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bg text-ink antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/25 text-ink;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-bg;
+  }
+}
+
+@layer utilities {
+  .container-page {
+    @apply mx-auto w-full max-w-content px-5 sm:px-8;
+  }
+
+  /* Faint grid backdrop behind the hero, faded out with a radial mask. */
+  .grid-backdrop {
+    background-image: linear-gradient(
+        to right,
+        rgb(var(--line) / 0.6) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgb(var(--line) / 0.6) 1px, transparent 1px);
+    background-size: 56px 56px;
+    -webkit-mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      #000 40%,
+      transparent 100%
+    );
+    mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 0%,
+      #000 40%,
+      transparent 100%
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

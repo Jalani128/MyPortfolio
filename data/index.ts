@@ -153,6 +153,71 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    title: "EduManage — School Management System",
+    blurb: "Multi-school SaaS platform",
+    description:
+      "A multi-tenant school management system where each school's data is fully isolated. Role-aware dashboards for admins, teachers, students, and parents cover enrollment, attendance, timetables, homework, exams, and fees.",
+    tech: [
+      "React.js",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Socket.IO",
+      "JWT",
+      "Tailwind CSS",
+    ],
+    image: "/projects/school-management.png",
+    liveUrl: "",
+    repoUrl: "",
+    featured: true,
+    highlights: [
+      "Multi-tenant data isolation enforced at the query layer",
+      "Four role-based dashboards with server-side RBAC",
+      "Real-time notifications scoped by school via Socket.IO",
+      "Analytics dashboards built with Chart.js",
+    ],
+  },
+  {
+    title: "IntelliVex Technologies",
+    blurb: "IT company website + CMS admin",
+    description:
+      "The corporate website for IntelliVex, an IT services company offering web, mobile, AI, data science, and cloud solutions. Paired with a custom admin panel so the team manages services, products, portfolio, industries, and testimonials without touching code.",
+    tech: [
+      "React.js",
+      "Tailwind CSS",
+      "GSAP",
+      "Framer Motion",
+      "REST APIs",
+      "Zod",
+    ],
+    image: "/projects/intellivex.png",
+    liveUrl: "https://intellivex.vercel.app/",
+    repoUrl: "https://github.com/Jalani128/IntelliVex",
+    featured: true,
+    highlights: [
+      "Content-driven pages for services, products, and case studies",
+      "Admin CMS with rich-text editor and validated forms",
+      "GSAP and Framer Motion animations with SEO meta tags",
+    ],
+  },
+  {
+    title: "Aureon Ventures & Technologies",
+    blurb: "Bilingual IT services website",
+    description:
+      "A bilingual (English / Arabic) website for a Saudi IT services firm, covering cloud, Microsoft Dynamics 365, managed IT support, energy monitoring, and network infrastructure — each with its own dedicated service page.",
+    tech: ["React.js", "React Router", "Framer Motion", "Vite"],
+    image: "/projects/aureon.png",
+    liveUrl: "",
+    repoUrl: "https://github.com/Jalani128/Aureon",
+    featured: true,
+    highlights: [
+      "English and Arabic content for a Saudi audience",
+      "Dedicated pages for Dynamics 365, SupportOS, and Energy",
+      "Smooth page transitions with Framer Motion",
+    ],
+  },
+  {
     title: "Assets Appraisals",
     blurb: "Property valuation platform",
     description:
